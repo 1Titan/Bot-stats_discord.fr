@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        title DiscordStatsBot
+        link(rel='stylesheet', href='/index.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=KoHo')
+        link(rel='shortcut icon', href='/favicon.ico')
+        link(rel='icon', href='/favicon.ico')
+        script(src='/index.js')
+        script let schema = !{schema}
+    body
+        .main-container.white
+            .container.space
+                p.strong Discord Stats Bot
+                .end
+                    a.white(href='/') Index
+                    |
+                    |
+                    a > Advanced queries
+            .container.column
+                .row
+                    .column.flex-one
+                        p Choose
+                        br
+                        .row
+                            p Table
+                            select.margin-sides#tables
+                                each element in tables
+                                    option(value=element).consolas #{element}
+                            p fields
+                            .column#fieldList
+                            a.white.strong(href='#', onclick='addField()', style={'text-decoration': 'none'}) +
+                        br
+                        p Write
+                        br
+                        input#query(type='text')
+                    input(type='button', value='QUERY', onclick='query()')
+                p Results
+                .list#results
+                p.strong(style={color: '#f00'})#error

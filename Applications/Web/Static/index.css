@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow: hidden;
+  height: 100%;
+  background-color: #333;
+  font-family: "KoHo", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+select, input {
+  background-color: #555;
+  border: none;
+  color: #fff;
+  height: 24px;
+  margin: 0;
+}
+
+input:active {
+  background-color: #444;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+.center {
+  text-align: center;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 10px;
+  width: 50vw;
+  display: flex;
+  padding: 10px;
+  background-color: #444;
+}
+
+.list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 300px;
+  margin-top: 5px;
+}
+
+.list > *:nth-child(2n+1) {
+  background-color: #555;
+  padding: 5px;
+  display: flex;
+}
+
+.list > *:nth-child(2n) {
+  background-color: #666;
+  padding: 5px;
+  display: flex;
+}
+
+.list > *:first-child {
+  position: sticky;
+  background-color: #555;
+}
+
+.diagram {
+  overflow-x: auto;
+  overflow-y: visible;
+  height: 300px;
+}
+
+.bar-container {
+  flex: 1 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.diagram > .item > .label {
+  flex: 0 1;
+  text-align: center;
+}
+
+.bar {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background-color: #333;
+}
+
+.bar:hover {
+  background-color: #555;
+}
+
+.diagram > .item {
+  display: flex;
+  flex-flow: column;
+  height: 90%;
+  margin: 5px;
+}
+
+.flex-one {
+  flex: 1 1;
+}
+
+.flex-two {
+  flex: 2 1;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.row-reverse {
+  display: flex;
+  flex-flow: row-reverse;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.start {
+  align-items: flex-start;
+}
+
+.strech {
+  align-items: stretch;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.white {
+  color: white;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.consolas {
+  font-family: Consolas, monaco, monospace;
+}
+
+.margin-sides {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#guildList {
+  display: flex;
+  flex-flow: column;
+}
+
+#fieldList > select {
+  margin-bottom: 2px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+      width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+      width: 100vw;
+  }
+}
